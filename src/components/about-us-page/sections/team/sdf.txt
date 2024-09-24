@@ -1,0 +1,118 @@
+'use client';
+
+import { Box, Grid } from '@chakra-ui/react';
+import { FC, useState } from 'react';
+import {
+	TeamContentWrapper,
+	TeamDescription,
+	TeamGridItem,
+	TeamName,
+} from '../..';
+import { Overlay } from '../../../util';
+// import { teamData } from '@/lib/data/aboutData';
+
+type TeamProps = {
+	aboutPageTeamData: {
+		members?: any;
+		title?: string;
+	};
+};
+// type TeamProps = {
+// 	data: {
+// 		name?: string;
+// 		position?: string;
+// 		description?: string;
+// 		imgSrc?: string;
+// 	}[];
+// };
+
+const Team: FC<TeamProps> = ({ aboutPageTeamData }) => {
+	console.log('team:', aboutPageTeamData?.members);
+	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+	// Calculate width for grid items on hover for desktop view
+	const getGridItemWidth = (index: number) => {
+		if (hoveredIndex === null) {
+			return `${100 / aboutPageTeamData?.members?.length}vw`; // Each item takes equal width when no hover
+		}
+		return hoveredIndex === index
+			? '55vw'
+			: `${45 / (aboutPageTeamData?.members?.length - 1)}vw`; // Hover effect width
+	};
+
+	return (
+		<Box overflowX='hidden' bg='header.500'>
+			<Grid
+				templateColumns={{
+					base: '1fr', // 1 column in mobile view
+					// md: `repeat(${data?.length}, 1fr)`, // Multiple columns in desktop view
+				}}
+				gap={0}
+				transition='all 0.5s ease-in-out' // Smooth transition for resizing
+			>
+				{aboutPageTeamData?.members?.map((item: any, index: any) => (
+					<TeamGridItem
+						key={index}
+						w={{
+							base: '100vw', // Full width in mobile view
+							md: getGridItemWidth(index), // Dynamic width in desktop view
+						}}
+						onMouseEnter={() => setHoveredIndex(index)}
+						onMouseLeave={() => setHoveredIndex(null)}
+					>
+						{/* Image and Overlay Section */}
+						<Box
+							backgroundImage={`url(${item?.image})`}
+							position='relative'
+							h={{ base: '400px', md: '650px' }} // Responsive height
+							backgroundPosition='center'
+							backgroundSize='cover'
+							transition='0.3s ease-in-out'
+							_hover={{
+								transform: 'scale(1.4)',
+							}}
+							mx={{ base: '.8rem', md: 0 }}
+						>
+							<Overlay display={{ base: 'none', md: 'block' }} />
+						</Box>
+
+						{/* Content: Bottom for Mobile, Overlay for Desktop */}
+						<TeamContentWrapper
+							position={{ base: 'relative', md: 'absolute' }}
+							bottom={{ base: 0, md: '1.5rem' }}
+							opacity={{ base: 1, md: hoveredIndex === index ? 1 : 0 }}
+							visibility={{
+								base: 'visible',
+								md: hoveredIndex === index ? 'visible' : 'hidden',
+							}}
+							maxWidth='550px'
+							transition='opacity 0.8s ease-in-out, visibility 0.1s ease-in-out'
+						>
+							<TeamName>{item?.name}</TeamName>
+							<TeamDescription>{item?.position}</TeamDescription>
+							<TeamDescription color='primary.lightWhite'>
+								{item?.description}
+							</TeamDescription>
+						</TeamContentWrapper>
+
+						{/* Side Content Visible When Not Hovered (for Desktop) */}
+						{hoveredIndex !== index && (
+							<TeamContentWrapper
+								w='40rem'
+								h='6.25rem'
+								bottom='17.25rem'
+								left='-17.90rem'
+								transform='rotate(-90deg)'
+								display={{ base: 'none', md: 'block' }} // Hide in mobile, show in desktop
+							>
+								<TeamName>{item?.name}</TeamName>
+							</TeamContentWrapper>
+						)}
+					</TeamGridItem>
+				))}
+			</Grid>
+		</Box>
+	);
+};
+
+export default Team;
