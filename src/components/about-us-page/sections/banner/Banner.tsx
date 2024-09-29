@@ -20,7 +20,8 @@ const Banner: FC<BannerProps> = ({ bannarData, text, imgSrc }) => {
 			h={{ base: '250px', lg: '500px' }}
 			backgroundPosition={{ base: 'center center', lg: 'center center' }}
 			backgroundSize='cover'
-			backgroundImage={`url(${bannarData?.imgSrc})`}
+			backgroundImage={`url(${imgSrc})`}
+			// backgroundImage={`url(${bannarData?.imgSrc})`}
 			backgroundRepeat='no-repeat'
 			position='relative'
 			mt={{ base: '60px', xl: '80px' }}
@@ -42,7 +43,8 @@ const Banner: FC<BannerProps> = ({ bannarData, text, imgSrc }) => {
 					position='relative'
 					zIndex='99'
 				>
-					{bannarData?.text}
+					{/* {bannarData?.text} */}
+					{text}
 				</Text>
 			</Stack>
 		</Box>

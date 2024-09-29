@@ -9,8 +9,14 @@ export const navLinks = [
 		label: '01',
 	},
 	{
+		id: 32,
+		text: 'Services',
+		link: '/services',
+		label: '03',
+	},
+	{
 		id: 31,
-		text: 'Amenities',
+		text: 'What We Do',
 		link: '/',
 		clickable: false,
 		label: '02',
@@ -27,12 +33,7 @@ export const navLinks = [
 			},
 		],
 	},
-	{
-		id: 32,
-		text: 'Floor Plan',
-		link: '/floorplan',
-		label: '03',
-	},
+	
 	{
 		id: 33,
 		text: 'Residences',

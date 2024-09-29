@@ -1,7 +1,16 @@
 'use client';
 import { Overlay, VisionHeadingText } from '@/components/util';
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
-import { Box, Flex, IconButton, Image, Text } from '@chakra-ui/react'; // If you're using Chakra UI
+import {
+	Box,
+	Button,
+	Flex,
+	Icon,
+	IconButton,
+	Image,
+	Text,
+} from '@chakra-ui/react'; // If you're using Chakra UI
+import Link from 'next/link';
 import { FC } from 'react';
 import SlickSlider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
@@ -88,15 +97,17 @@ type SliderWithContent = {
 			heading: string;
 			para: string;
 		};
-		label?: string;
+		buttonText?: string;
+		buttonIcon?: any;
 	}[];
 };
 
 const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
+	console.log('my sliderData:', sliderData);
 	const settings = {
 		centerMode: true,
 		centerPadding: '300px',
-		autoplay: true,
+		// autoplay: true,
 		autoplaySpeed: 5000,
 		pauseOnHover: true,
 		slidesToShow: 1,
@@ -148,7 +159,7 @@ const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
 			<SlickSlider {...settings}>
 				{sliderData.map((item, index) => (
 					<Box key={index} px='20px'>
-						<Box position={item?.content && 'relative'}>
+						<Box position={item?.content && 'relative'} height='80vh'>
 							<Image
 								src={item?.imgSrc}
 								alt={`slide-${index}`}
@@ -177,13 +188,26 @@ const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
 									<Text
 										fontSize={{ base: '1rem', lg: '1.5rem' }}
 										color='primary.white'
+										maxW={{ base: '60rem' }}
 									>
 										{item?.content?.para}
 									</Text>
+									<Link href='#'>
+										<Flex alignItems='center' color='white' gap='0.4rem' mt='10px'>
+											<Text data-peer>{item?.buttonText}</Text>
+											<Icon
+												_peerHover={{
+													transform: 'translateX(5px)',
+													transition: 'transform 0.3s ease',
+												}}
+												as={item?.buttonIcon}
+											/>
+										</Flex>
+									</Link>
 								</Box>
 							)}
 
-							{item?.label && (
+							{/* {item?.label && (
 								<Box
 									position='absolute'
 									bottom='7rem'
@@ -194,7 +218,7 @@ const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
 								>
 									{item?.label}
 								</Box>
-							)}
+							)} */}
 						</Box>
 					</Box>
 				))}

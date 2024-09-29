@@ -29,6 +29,9 @@ const images = [
 	'/slider/sliderThree.jpg',
 ];
 
+
+
+
 export const solutionSliderData = [
 	{
 		imgSrc: '/solutionPage/imgOne.jpg',
