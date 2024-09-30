@@ -56,56 +56,19 @@ const DrawerExample = ({
 				<DrawerHeader>Menu</DrawerHeader>
 
 				{/* You can place any additional content here, like navigation links */}
-				{/* <UnorderedList h='full'>
+				<UnorderedList h='full'>
 					{navLinks.map(item => (
 						<ListItem mx={{ base: '10px', lg: '15px' }} key={item?.id}>
-							{item?.dropdown ? (
-								<Box
-									onClick={handleOpenDropdown}
-									style={{ display: 'flex', justifyContent: 'space-between' }}
-									cursor='pointer'
-								>
-									<NavText>{item?.text}</NavText>
-									{dropdownOpen ? <MinusIcon /> : <AddIcon />}
-								</Box>
-							) : (
-								<Link
-									style={{ display: 'flex', justifyContent: 'space-between' }}
-									href={item.link}
-								>
-									<NavText>{item?.text}</NavText>
-									{item?.dropdown && <AddIcon />}
-								</Link>
-							)}
-
-							{item.dropdown && dropdownOpen && (
-								<Box
-									bg='primary.white'
-									borderRadius={sizes.BORDER_RADIUS_100}
-									overflow='hidden'
-									py='.8rem'
-								>
-									{item.dropdown?.map((dropdown, index) => (
-										<Link key={index} href={dropdown.link}>
-											<Box transition='.3s' key={dropdown.id} p='10px 18px'>
-												<Text
-													transition='.3s'
-													color='primary.black'
-													fontSize='1.025rem'
-													lineHeight='1.3'
-													fontWeight='500'
-												>
-													{dropdown.text}
-												</Text>
-											</Box>
-										</Link>
-									))}
-								</Box>
-							)}
+							<Link
+								style={{ display: 'flex', justifyContent: 'space-between' }}
+								href={item.link}
+							>
+								<NavText>{item?.text}</NavText>
+							</Link>
 						</ListItem>
 					))}
 					<ButtonComp />
-				</UnorderedList> */}
+				</UnorderedList>
 				<Stack justifyContent='flex-end' alignItems={'center'} py='1.3rem'>
 					<Text
 						fontSize='0.9em'

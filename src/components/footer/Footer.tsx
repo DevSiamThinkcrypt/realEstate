@@ -37,16 +37,7 @@ const Footer = () => {
 								<UnorderedList key={index} m={0}>
 									<ListItem>
 										<Link style={{ display: 'inline-block' }} href={item.link}>
-											<NavText
-												color='primary.lightWhite'
-												// _hover={{
-												// 	color: 'yellow.500',
-												// 	transform: 'translateX(5px)',
-												// 	transition: 'all 0.3s linear',
-												// }}
-											>
-												{item?.text}
-											</NavText>
+											<NavText color='primary.lightWhite'>{item?.text}</NavText>
 										</Link>
 									</ListItem>
 								</UnorderedList>
@@ -65,38 +56,50 @@ const Footer = () => {
 											color='primary.lightWhite'
 											maxW='24rem'
 											lineHeight='2rem'
-											mb='1.2rem'
+											mb='0.6rem'
 										>
-											{item.headOffice}
+											{item.flat}
 										</NavText>
+									</ListItem>
+									<ListItem>
 										<NavText
 											color='primary.lightWhite'
 											maxW='24rem'
 											lineHeight='2rem'
-											mb='1.2rem'
+											mb='0.6rem'
 										>
-											{item.headOffice}
+											{item.road}
 										</NavText>
-										{/* <NavText
-											color='yellow.500'
-											cursor='pointer'
-											// _hover={{
-											// 	color: 'yellow.300',
-											// 	transition: 'all 0.3s ease',
-											// }}
+									</ListItem>
+									<ListItem>
+										<NavText
+											color='primary.lightWhite'
+											maxW='24rem'
+											lineHeight='2rem'
+											mb='0.6rem'
 										>
-											{item.mail}
-										</NavText> */}
-										{/* <NavText
-											color='yellow.500'
-											cursor='pointer'
-											// _hover={{
-											// 	color: 'yellow.300',
-											// 	transition: 'all 0.3s linear',
-											// }}
+											{item.postal}
+										</NavText>
+									</ListItem>
+									<ListItem>
+										<NavText
+											color='primary.lightWhite'
+											maxW='24rem'
+											lineHeight='2rem'
+											mb='0.6rem'
 										>
-											{item.number}
-										</NavText> */}
+											{item.tel}
+										</NavText>
+									</ListItem>
+									<ListItem>
+										<NavText
+											color='primary.lightWhite'
+											maxW='24rem'
+											lineHeight='2rem'
+											mb='0.6rem'
+										>
+											{item.email}
+										</NavText>
 									</ListItem>
 								</UnorderedList>
 							))}
@@ -112,16 +115,16 @@ const Footer = () => {
 										h='3.5rem'
 										bgColor='primary.white'
 										borderRadius='50%'
+										transition='all 0.35s linear'
 										_hover={{
-											bgColor: 'yellow.300',
-											transition: 'all 0.4s linear',
+											bgColor: '#21355f',
 										}}
 										role='group'
 									>
 										<Icon
 											as={iconData.icon}
 											boxSize='1.6rem'
-											_groupHover={{ color: 'primary.white' }}
+											_groupHover={{ color: '#ffffff' }}
 										/>
 									</Center>
 								</Link>

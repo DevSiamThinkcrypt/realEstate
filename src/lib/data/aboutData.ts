@@ -1,6 +1,6 @@
-import { FaTwitter, FaYoutube } from 'react-icons/fa';
 import { LiaLinkedinIn } from 'react-icons/lia';
 import { RiFacebookFill } from 'react-icons/ri';
+import { FaInstagram } from 'react-icons/fa';
 export const navLinks = [
 	{
 		id: 30,
@@ -114,10 +114,24 @@ export const footerNavLinks = [
 	// 	link: 'https://krishi-shwapno-blog.vercel.app/',
 	// },
 ];
+// Thinkcrypt.io
 
+//
+
+//
+
+//
+
+//
+
+//
 export const footerContactData = [
 	{
-		headOffice: 'Head Office: 88 Road No. 17/A, Dhaka 1213',
+		flat: 'Flat 5B, House 88',
+		road: 'Road 17/A, Block E, Banani',
+		postal: 'Dhaka 1213, Bangladesh',
+		tel: 'Tel: (+88) 01828398225, 01799399555',
+		email: 'Email: info@thinkcrypt.io',
 		// corporateOffice: 'Corporate office: 47, Dhanmondi 3/A, Dhaka, Bangladesh.',
 		// mail: 'contact@krishishwapno.com',
 		// number: '+880 1840018503 (whatsapp)',
@@ -133,19 +147,15 @@ export const copyrightData = {
 export const footerIconsData = [
 	{
 		icon: RiFacebookFill,
-		link: 'https://www.facebook.com/krishishwapno',
+		link: 'https://www.facebook.com/thinkcrypt/',
 	},
 	{
-		icon: FaTwitter,
-		link: 'https://twitter.com/KrishiShwapno',
+		icon: FaInstagram,
+		link: 'https://www.instagram.com/thinkcrypt.io/',
 	},
 	{
 		icon: LiaLinkedinIn,
-		link: 'https://www.linkedin.com/company/krishi-shwapno/',
-	},
-	{
-		icon: FaYoutube,
-		link: 'https://www.youtube.com/channel/UCW21B1KlAczRwQFHWhRofig',
+		link: 'https://bd.linkedin.com/company/thinkcrypt-io',
 	},
 ];
 
