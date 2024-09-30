@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const CopyrightSection = () => {
 	return (
-		<Box py='1.6rem' bg='copyright.500'>
+		<Box py='1.6rem' bg='#0a2036'>
 			<Box px={{ base: '20px', xl: '120px' }}>
 				<Flex
 					justifyContent='space-between'

@@ -14,7 +14,14 @@ import DesktopMenu from './DesktopMenu';
 import { FaBars } from 'react-icons/fa';
 
 type HeaderProps = {
-	variant?: 'transparent' | 'solid';
+	variant?: 'transparent' | 'solid' | 'blur';
+};
+
+const blurBg = {
+	bg: 'rgba(255, 255, 255, 1)',
+	// borderRadius: '16px',
+	boxShadow: '0 4px 30px rgba(0, 0, 0, 0.2)',
+	backdropFilter: 'blur(12px)',
 };
 
 const Header: FC<HeaderProps> = ({ variant }) => {
@@ -45,13 +52,14 @@ const Header: FC<HeaderProps> = ({ variant }) => {
 			top={0}
 			left={0}
 			w='full'
-			h={{ base: '60px', xl: isSticky ? '60px' : '80px' }}
+			h={{ base: '60px', xl: isSticky ? '70px' : '80px' }}
 			zIndex='999'
-			bg={variant === 'solid' ? 'header.500' : 'transparent'}
 			color='white'
 			boxShadow={isSticky ? 'lg' : 'none'}
 			p={{ base: '0px 20px', xl: '0px 120px' }}
 			transition='all 0.3s ease-in-out'
+			style={blurBg}
+			bg={isSticky ? 'rgba(245, 245, 245, 0.623)' : ''}
 		>
 			<Flex justifyContent={'space-between'} alignItems='center' height='100%'>
 				<Flex
@@ -64,7 +72,7 @@ const Header: FC<HeaderProps> = ({ variant }) => {
 						<Image
 							w='auto'
 							h='95px'
-							src='./logo/realLogo.png'
+							src='./image/logo_1.png'
 							alt='Logo Image'
 						/>
 					</Link>

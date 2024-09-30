@@ -24,7 +24,7 @@ const AnimatedInput: FC<inputTextType> = ({ inputText }) => {
 				fontSize={isFocused || hasValue ? '0.85rem' : '1rem'}
 				transition='all 0.3s ease'
 				transform='translateY(-50%)'
-				color={isFocused ? 'yellow.300' : 'gray.500'}
+				color={isFocused ? '#1d315e' : 'gray.500'}
 				pointerEvents='none'
 			>
 				{inputText}
@@ -34,7 +34,7 @@ const AnimatedInput: FC<inputTextType> = ({ inputText }) => {
 				onFocus={handleFocus}
 				onBlur={handleBlur}
 				onChange={e => setHasValue(!!e.target.value)}
-				focusBorderColor='yellow.300'
+				focusBorderColor='#1d315e'
 				borderColor='gray.500'
 			/>
 		</FormControl>

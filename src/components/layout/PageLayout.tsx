@@ -6,7 +6,7 @@ import ScrollIndicator from '../scrolIndicator/ScrolIndicator';
 import FollowUs from '../scrolIndicator/FollowUs';
 type LayoutProps = {
 	children?: ReactNode;
-	variant?: 'transparent' | 'solid';
+	variant?: 'transparent' | 'solid' | 'blur';
 };
 
 const PageLayout: FC<LayoutProps> = ({ children, variant }) => {

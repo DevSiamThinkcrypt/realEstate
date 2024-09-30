@@ -24,7 +24,7 @@ const Banner: FC<BannerProps> = ({ bannarData, text, imgSrc }) => {
 			// backgroundImage={`url(${bannarData?.imgSrc})`}
 			backgroundRepeat='no-repeat'
 			position='relative'
-			mt={{ base: '60px', xl: '80px' }}
+			// mt={{ base: '60px', xl: '80px' }}
 		>
 			<Stack
 				justifyContent='flex-end'

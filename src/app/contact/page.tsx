@@ -73,11 +73,11 @@ const page = () => {
 						</Flex>
 						<Center mt='4rem'>
 							<Button
-								colorScheme='blue'
 								w='140px'
+								color='white'
 								borderRadius='full'
-								bgColor='yellow.300'
-								_hover={{ bgColor: 'yellow.700' }}
+								bgColor='#132344'
+								_hover={{ bgColor: '#1d315e' }}
 							>
 								Send
 							</Button>
@@ -85,7 +85,7 @@ const page = () => {
 					</Box>
 				</Box>
 				<Box display={{ base: 'none', lg: 'block' }}>
-					<Image src='./story/storyOne.png' h='100vh' />
+					<Image src='./image/contact.jpg' h='100vh' />
 				</Box>
 			</Grid>
 		</PageLayout>

@@ -12,46 +12,53 @@ export const navLinks = [
 		id: 32,
 		text: 'Services',
 		link: '/services',
-		label: '03',
-	},
-	{
-		id: 31,
-		text: 'What We Do',
-		link: '/',
-		clickable: false,
 		label: '02',
-		dropdown: [
-			{
-				id: 50,
-				text: 'What Problem We Are Facing',
-				link: '/problem',
-			},
-			{
-				id: 51,
-				text: 'Our Solutions',
-				link: '/solution',
-			},
-		],
-	},
-	
-	{
-		id: 33,
-		text: 'Residences',
-		link: '/about',
-		label: '04',
 	},
 	{
 		id: 34,
-		text: 'About Us',
-		link: '/impact',
-		label: '05',
+		text: 'Properties',
+		link: '/properties',
+		label: '03',
 	},
+
 	{
-		id: 35,
-		text: 'Our Blog & Tech',
-		link: 'https://krishi-shwapno-blog.vercel.app/',
-		label: '06',
+		id: 33,
+		text: 'About Us',
+		link: '/about',
+		label: '04',
 	},
+	// {
+	// 	id: 31,
+	// 	text: 'What We Do',
+	// 	link: '/',
+	// 	clickable: false,
+	// 	label: '02',
+	// 	dropdown: [
+	// 		{
+	// 			id: 50,
+	// 			text: 'What Problem We Are Facing',
+	// 			link: '/problem',
+	// 		},
+	// 		{
+	// 			id: 51,
+	// 			text: 'Our Solutions',
+	// 			link: '/solution',
+	// 		},
+	// 	],
+	// },
+
+	// {
+	// 	id: 34,
+	// 	text: 'About Us',
+	// 	link: '/impact',
+	// 	label: '05',
+	// },
+	// {
+	// 	id: 35,
+	// 	text: 'Our Blog & Tech',
+	// 	link: 'https://krishi-shwapno-blog.vercel.app/',
+	// 	label: '06',
+	// },
 ];
 
 export const footerNavLinks = [
@@ -61,44 +68,59 @@ export const footerNavLinks = [
 		link: '/',
 	},
 	{
-		id: 31,
-		text: 'What Problem We Are Facing',
-		link: '/problem',
-	},
-	{
 		id: 32,
-		text: 'Our Solution',
-		link: '/solution',
-	},
-	{
-		id: 33,
-		text: 'Our Value Additions',
-		link: '/value',
+		text: 'Services',
+		link: '/services',
 	},
 	{
 		id: 34,
+		text: 'Properties',
+		link: '/properties',
+	},
+
+	{
+		id: 33,
 		text: 'About Us',
 		link: '/about',
 	},
-	{
-		id: 35,
-		text: 'Impact & Traction',
-		link: '/impact',
-	},
-	{
-		id: 36,
-		text: 'Our Blog & Tech',
-		link: 'https://krishi-shwapno-blog.vercel.app/',
-	},
+	// {
+	// 	id: 31,
+	// 	text: 'What Problem We Are Facing',
+	// 	link: '/problem',
+	// },
+	// {
+	// 	id: 32,
+	// 	text: 'Our Solution',
+	// 	link: '/solution',
+	// },
+	// {
+	// 	id: 33,
+	// 	text: 'Our Value Additions',
+	// 	link: '/value',
+	// },
+	// {
+	// 	id: 34,
+	// 	text: 'About Us',
+	// 	link: '/about',
+	// },
+	// {
+	// 	id: 35,
+	// 	text: 'Impact & Traction',
+	// 	link: '/impact',
+	// },
+	// {
+	// 	id: 36,
+	// 	text: 'Our Blog & Tech',
+	// 	link: 'https://krishi-shwapno-blog.vercel.app/',
+	// },
 ];
 
 export const footerContactData = [
 	{
-		headOffice:
-			'Head office: Hose #266, Road #365, Mirpur-1, Dhaka 1216, Bangladesh',
-		corporateOffice: 'Corporate office: 47, Dhanmondi 3/A, Dhaka, Bangladesh.',
-		mail: 'contact@krishishwapno.com',
-		number: '+880 1840018503 (whatsapp)',
+		headOffice: 'Head Office: 88 Road No. 17/A, Dhaka 1213',
+		// corporateOffice: 'Corporate office: 47, Dhanmondi 3/A, Dhaka, Bangladesh.',
+		// mail: 'contact@krishishwapno.com',
+		// number: '+880 1840018503 (whatsapp)',
 	},
 ];
 
@@ -321,22 +343,22 @@ export const partnersImg = [
 ];
 
 export const partnersImgTwo = [
-  {
-	imgSrc: './partnerImg/imgSeven.png',
-  },
-  {
-	imgSrc: './partnerImg/imgOne.png',
-  },
-  {
-	imgSrc: './partnerImg/imgOne.png',
-  },
-  {
-	imgSrc: './partnerImg/imgOne.png',
-  },
-  {
-	imgSrc: './partnerImg/imgOne.png',
-  },
-]
+	{
+		imgSrc: './partnerImg/imgSeven.png',
+	},
+	{
+		imgSrc: './partnerImg/imgOne.png',
+	},
+	{
+		imgSrc: './partnerImg/imgOne.png',
+	},
+	{
+		imgSrc: './partnerImg/imgOne.png',
+	},
+	{
+		imgSrc: './partnerImg/imgOne.png',
+	},
+];
 
 export const awardImg = [
 	{

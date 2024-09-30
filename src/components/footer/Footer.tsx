@@ -22,7 +22,7 @@ const Footer = () => {
 		<Box>
 			<Box
 				p={{ base: '80px 20px 80px 20px', xl: '80px 120px 80px 120px' }}
-				bg='header.500'
+				bg='#132344'
 			>
 				<Grid
 					h='auto'
