@@ -56,7 +56,7 @@ const DrawerExample = ({
 				<DrawerHeader>Menu</DrawerHeader>
 
 				{/* You can place any additional content here, like navigation links */}
-				<UnorderedList h='full'>
+				{/* <UnorderedList h='full'>
 					{navLinks.map(item => (
 						<ListItem mx={{ base: '10px', lg: '15px' }} key={item?.id}>
 							{item?.dropdown ? (
@@ -105,7 +105,7 @@ const DrawerExample = ({
 						</ListItem>
 					))}
 					<ButtonComp />
-				</UnorderedList>
+				</UnorderedList> */}
 				<Stack justifyContent='flex-end' alignItems={'center'} py='1.3rem'>
 					<Text
 						fontSize='0.9em'

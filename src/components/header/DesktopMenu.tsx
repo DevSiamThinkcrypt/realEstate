@@ -29,7 +29,7 @@ const DesktopMenu: FC<DesktopMenuProps> = ({ isSticky }) => {
         `}
 			/>
 
-			<UnorderedList
+			{/* <UnorderedList
 				w='full'
 				h='full'
 				transition='.3s'
@@ -98,7 +98,7 @@ const DesktopMenu: FC<DesktopMenuProps> = ({ isSticky }) => {
 				))}
 
 				<ButtonComp />
-			</UnorderedList>
+			</UnorderedList> */}
 		</>
 	);
 };

@@ -75,9 +75,9 @@ const Footer = () => {
 											lineHeight='2rem'
 											mb='1.2rem'
 										>
-											{item.corporateOffice}
+											{item.headOffice}
 										</NavText>
-										<NavText
+										{/* <NavText
 											color='yellow.500'
 											cursor='pointer'
 											// _hover={{
@@ -86,8 +86,8 @@ const Footer = () => {
 											// }}
 										>
 											{item.mail}
-										</NavText>
-										<NavText
+										</NavText> */}
+										{/* <NavText
 											color='yellow.500'
 											cursor='pointer'
 											// _hover={{
@@ -96,7 +96,7 @@ const Footer = () => {
 											// }}
 										>
 											{item.number}
-										</NavText>
+										</NavText> */}
 									</ListItem>
 								</UnorderedList>
 							))}
