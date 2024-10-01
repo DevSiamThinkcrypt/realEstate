@@ -77,7 +77,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 						xl: '-50%',
 						'2xl': '-70%',
 					}}
-					top={{ base: '155%', sm: '180%', md: '195%', lg: '195%', xl: '260%' }}
+					top={{ base: '145%', sm: '180%', md: '195%', lg: '195%', xl: '260%' }}
 					fontSize={{
 						base: '9rem',
 						sm: '10rem',

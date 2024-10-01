@@ -1,3 +1,8 @@
+import { IoBedOutline } from 'react-icons/io5';
+import { PiBathtub } from 'react-icons/pi';
+import { RiSofaLine } from 'react-icons/ri';
+import { PiHouseLineLight } from 'react-icons/pi';
+import { PiGarage } from 'react-icons/pi';
 export const aboutUsData = [
 	{
 		image: './image/service_slider_a2.jpg',
@@ -23,7 +28,32 @@ export const propertyData = [
 		title: 'Gulshan Avenue, Dhaka',
 		price: '৳ 125,000,000',
 		description:
-			'The last of two luxurious residences, accessed via a private drive from Gulshan Avenue, this modern property offers 465 sq. m. / 5,000 sq. ft. of lavish accommodation spread over two floors. A perfect blend of contemporary design and comfort, this home provides an ideal retreat in the heart of Dhaka’s most prestigious neighborhood..',
+			'The last of two luxurious residences, accessed via a private drive from Gulshan Avenue, this modern property offers 465 sq. m. / 5,000 sq. ft. of lavish accommodation spread over two floors. A perfect blend of contemporary design and comfort, this home provides an ideal retreat in the heart of Dhaka’s most prestigious neighborhood.',
+
+		flag: 'For Sale',
+		status: 'OnGoing',
+		amenities: [
+			{
+				icon: PiHouseLineLight,
+				text: '120 sq m',
+			},
+			{
+				icon: IoBedOutline,
+				text: '3',
+			},
+			{
+				icon: PiBathtub,
+				text: '2',
+			},
+			{
+				icon: RiSofaLine,
+				text: '3',
+			},
+			{
+				icon: PiGarage,
+				text: '4',
+			},
+		],
 	},
 	{
 		image: '/banner/bannar_two.jpg',
@@ -31,6 +61,30 @@ export const propertyData = [
 		price: '৳ 87,000,000',
 		description:
 			'This bespoke residence, situated on a quiet road in Uttara Sector 4, offers 420 sq. m. / 4,520 sq. ft. of spacious living, meticulously crafted to the highest standards. With easy access to major landmarks, this modern home spans across three floors, featuring all the luxury essentials for a growing family.',
+		flag: 'For Rent',
+		status: 'Under Construction',
+		amenities: [
+			{
+				icon: PiHouseLineLight,
+				text: '140 sq m',
+			},
+			{
+				icon: IoBedOutline,
+				text: '3',
+			},
+			{
+				icon: PiBathtub,
+				text: '2',
+			},
+			{
+				icon: RiSofaLine,
+				text: '3',
+			},
+			{
+				icon: PiGarage,
+				text: '4',
+			},
+		],
 	},
 	{
 		image: '/banner/bannar_three.jpg',
@@ -38,6 +92,30 @@ export const propertyData = [
 		price: '৳ 160,000,000',
 		description:
 			'A rare opportunity to acquire a prestigious residence in Baridhara Diplomatic Zone. This A-rated, energy-efficient home boasts 515 sq. m. / 5,540 sq. ft. of stylish accommodation laid out over three floors. Featuring state-of-the-art facilities, it is perfect for the discerning buyer seeking both luxury and security in one of Dhaka’s most sought-after locations.',
+		flag: 'For Rent',
+		status: 'commercial',
+		amenities: [
+			{
+				icon: PiHouseLineLight,
+				text: '132 sq m',
+			},
+			{
+				icon: IoBedOutline,
+				text: '3',
+			},
+			{
+				icon: PiBathtub,
+				text: '2',
+			},
+			{
+				icon: RiSofaLine,
+				text: '3',
+			},
+			{
+				icon: PiGarage,
+				text: '4',
+			},
+		],
 	},
 	{
 		image: '/image/service_slider_a1.jpg',
@@ -45,6 +123,30 @@ export const propertyData = [
 		price: '৳ 98,500,000',
 		description:
 			'Positioned in the heart of Bashundhara Residential Area, this stunning modern residence offers 380 sq. m. / 4,090 sq. ft. of high-end living space. Set over three floors, the property features a private driveway and is just minutes away from leading international schools and shopping centers.',
+		flag: 'Commertial',
+		status: 'Ongoing',
+		amenities: [
+			{
+				icon: PiHouseLineLight,
+				text: '135 sq m',
+			},
+			{
+				icon: IoBedOutline,
+				text: '3',
+			},
+			{
+				icon: PiBathtub,
+				text: '2',
+			},
+			{
+				icon: RiSofaLine,
+				text: '3',
+			},
+			{
+				icon: PiGarage,
+				text: '4',
+			},
+		],
 	},
 	{
 		image: '/image/service_slider_a2.jpg',
@@ -52,6 +154,30 @@ export const propertyData = [
 		price: '৳ 78,000,000',
 		description:
 			'Located in the exclusive Nasirabad Housing Society, this spacious home offers 400 sq. m. / 4,300 sq. ft. of beautifully designed accommodation across two floors. With a private entry and landscaped garden, this property combines contemporary architecture with peaceful surroundings, making it a perfect family home in the port city of Chattogram.',
+		flag: 'For Rent',
+		status: 'Commercial',
+		amenities: [
+			{
+				icon: PiHouseLineLight,
+				text: '145 sq m',
+			},
+			{
+				icon: IoBedOutline,
+				text: '3',
+			},
+			{
+				icon: PiBathtub,
+				text: '2',
+			},
+			{
+				icon: RiSofaLine,
+				text: '3',
+			},
+			{
+				icon: PiGarage,
+				text: '4',
+			},
+		],
 	},
 	{
 		image: '/image/service_slider_a3.jpg',
@@ -59,5 +185,29 @@ export const propertyData = [
 		price: '৳ 95,000,000',
 		description:
 			'Nestled along the tranquil Sunamganj Road in Sylhet, this newly built residence boasts 365 sq. m. / 3,930 sq. ft. of premium living space. Spread over two floors, the property offers a unique opportunity to own a modern, energy-efficient home with beautiful views of the surrounding hills.',
+		flag: 'For Sale',
+		status: 'Under Construction',
+		amenities: [
+			{
+				icon: PiHouseLineLight,
+				text: '155 sq m',
+			},
+			{
+				icon: IoBedOutline,
+				text: '3',
+			},
+			{
+				icon: PiBathtub,
+				text: '2',
+			},
+			{
+				icon: RiSofaLine,
+				text: '3',
+			},
+			{
+				icon: PiGarage,
+				text: '4',
+			},
+		],
 	},
 ];

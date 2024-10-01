@@ -8,16 +8,38 @@ import {
 	Text,
 	Image,
 	Button,
+	Icon,
+	Grid,
+	GridItem,
 } from '@chakra-ui/react';
 
 import { FC } from 'react';
+import { IconType } from 'react-icons';
+
+type AmenitiesType = {
+	icon?: any;
+	text?: string;
+};
 
 type PropertyLayoutProps = {
+	// data: {
+	// 	title?: string;
+	// 	price?: string;
+	// 	description?: string;
+	// 	image?: string;
+	// 	amenities?: any;
+	// };
 	data: {
-		title?: string;
-		price?: string;
-		description?: string;
-		image?: string;
+		image: string;
+		title: string;
+		price: string;
+		description: string;
+		flag: string;
+		status: string;
+		amenities: {
+			icon: IconType;
+			text: string;
+		}[];
 	};
 	oddOrder?: boolean;
 };
@@ -32,9 +54,6 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 					h='full'
 					alignItems='left'
 					justifyContent='center'
-					// border='1px solid'
-					// borderColor='overlay.200'
-					// boxShadow='0px 3px 10px rgba(54,58,54,0.2)'
 					paddingLeft={oddOrder ? '2rem' : ''}
 					paddingRight={oddOrder ? '2rem' : ''}
 				>
@@ -60,6 +79,29 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 					>
 						{data?.description}
 					</Text>
+					<Grid
+						gridTemplateColumns='repeat(5, 0.5fr)'
+						justifyItems='center'
+						maxW='35rem'
+						mt='2rem'
+					>
+						{data?.amenities?.map((amenitiy, i) => (
+							<GridItem
+								key={i}
+								display='flex'
+								alignItems='center'
+								gap='0.5rem'
+								_first={{ justifySelf: 'self-start' }}
+								justifyItems='center'
+							>
+								<Icon as={amenitiy.icon} color='#444' boxSize='26px' />
+								<Text fontWeight='500' color='#444'>
+									{amenitiy.text}
+								</Text>
+								{/* garage */}
+							</GridItem>
+						))}
+					</Grid>
 				</Stack>
 				<Flex
 					order={{ base: '2', md: oddOrder ? '1' : '2' }}
@@ -89,8 +131,7 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 						alignItems='center'
 					>
 						<Text fontFamily={fonts.text} fontWeight='600'>
-							{' '}
-							For Sale
+							{data.flag}
 						</Text>
 					</Box>
 					<Box
@@ -107,14 +148,14 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 						alignItems='center'
 					>
 						<Text
-							fontSize='4rem'
+							fontSize='2.5rem'
 							color='white'
 							fontFamily={fonts.text}
 							fontWeight='600'
 							opacity='0.4'
 							textTransform='uppercase'
 						>
-							OnGoing
+							{data.status}
 						</Text>
 					</Box>
 				</Flex>

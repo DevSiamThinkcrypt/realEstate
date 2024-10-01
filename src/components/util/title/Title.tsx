@@ -12,7 +12,7 @@ const Title: React.FC<TitleProps> = ({ text, color, children, ...props }) => {
 			pt='0.15em'
 			fontFamily={fonts.heading}
 			color={color || 'primary.black'}
-			fontSize={{ base: '2.35rem', md: '3.25rem' }}
+			fontSize={{ base: '2.35rem', md: '2.8rem', lg: '3.25rem' }}
 			lineHeight='1.05'
 			letterSpacing='0.7px'
 			{...props}

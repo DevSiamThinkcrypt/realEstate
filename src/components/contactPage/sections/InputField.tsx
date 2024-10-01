@@ -3,10 +3,15 @@ import { FormControl, FormLabel, Input, Box } from '@chakra-ui/react';
 import { FC, useState } from 'react';
 
 type inputTextType = {
+	name?: string;
 	inputText: string;
+	value?: string;
+	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const AnimatedInput: FC<inputTextType> = ({ inputText }) => {
+const AnimatedInput: FC<inputTextType> = ({ inputText,value,
+	onChange,
+	name, }) => {
 	const [isFocused, setIsFocused] = useState(false);
 	const [hasValue, setHasValue] = useState(false);
 
@@ -36,7 +41,9 @@ const AnimatedInput: FC<inputTextType> = ({ inputText }) => {
 				variant='flushed'
 				onFocus={handleFocus}
 				onBlur={handleBlur}
-				onChange={e => setHasValue(!!e.target.value)}
+				name={name}
+				value={value}
+				onChange={onChange}
 				focusBorderColor='#1d315e'
 				borderColor='gray.500'
 			/>

@@ -10,15 +10,15 @@ const CopyrightSection = () => {
 			<Box px={{ base: '20px', xl: '120px' }}>
 				<Flex
 					justifyContent='space-between'
-					alignItems='center'
+					alignItems={{ base: 'left', md: 'center' }}
 					flexDir={{ base: 'column', md: 'row' }}
 				>
-					<Box display='flex'>
+					<Flex flexDir={{ base: 'column', sm: 'row' }}>
 						<NavText color='primary.lightWhite'>
 							&copy; {copyrightData.year}
 						</NavText>
 						<Box display='flex' alignItems='center'>
-							<NavText ml='0.6rem' color='yellow.300'>
+							<NavText ml={{ base: 0, sm: '0.6rem' }} color='yellow.300'>
 								{copyrightData.powered}
 							</NavText>
 							<Link target='_black' href='https://thinkcrypt.io/'>
@@ -27,7 +27,7 @@ const CopyrightSection = () => {
 								</NavText>
 							</Link>
 						</Box>
-					</Box>
+					</Flex>
 
 					<Box display='flex' gap='0.8rem' alignItems='center'>
 						<Link href='/privacy-policy'>
