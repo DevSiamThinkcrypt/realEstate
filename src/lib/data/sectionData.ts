@@ -19,7 +19,7 @@ export const sections = [
 			'Whether you’re buying or selling our team is always on hand to offer you the best advice',
 		btnText: 'Learn More',
 		imgSrc: '/banner/bannar_one.jpg',
-		bgColor: '#484744',
+		bgColor: '#D7263D',
 		color: '#fff',
 		horizontalText: 'Residential',
 	},
@@ -29,7 +29,7 @@ export const sections = [
 			'Make informed decisions.  Our research covers the full property spectrum with exclusive market updates',
 		btnText: 'Learn More',
 		imgSrc: '/banner/bannar_two.jpg',
-		bgColor: '#5a5c69',
+		bgColor: '#C589E8',
 		color: '#fff',
 		horizontalText: 'Research',
 	},
@@ -39,7 +39,7 @@ export const sections = [
 			'We pride ourselves on hiring the best people in the market so we can offer our clients market leading advice.',
 		btnText: 'Learn More',
 		imgSrc: '/banner/bannar_three.jpg',
-		bgColor: '#4a4c5c',
+		bgColor: '#7785AC ',
 		color: '#fff',
 		horizontalText: 'Experts',
 	},
@@ -48,7 +48,7 @@ export const sections = [
 export const serviceAppartment = {
 	title: 'Our Experts',
 	heading:
-		'Our team of experts are available to discuss your property requirements.',
+		'Our team of experts is here to assist you with all your property needs. We offer personalized consultations to ensure your specific requirements are met. Reach out to us today and let us help you find the perfect property.',
 	buttonText: 'Find an expert',
-	image: './image/appartment_img_1.jpg',
+	image: './image/expert_1.jpg',
 };

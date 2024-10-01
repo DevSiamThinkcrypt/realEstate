@@ -1,4 +1,5 @@
 import Title from '@/components/util/title/Title';
+import { fonts } from '@/lib/config/constants';
 import {
 	Box,
 	Flex,
@@ -39,12 +40,13 @@ const TwoColumnText: FC<TwoColumnTextProps> = ({ data, order }) => {
 						lineHeight='1.6'
 						mb='12px'
 						mt='10px'
+						fontFamily={fonts.text}
 						fontWeight='500'
 					>
 						{data?.heading}
 					</Text>
 					<Box>
-						<Button>Find an Expert</Button>
+						<Button fontFamily={fonts.text}>Find an Expert</Button>
 					</Box>
 				</Stack>
 				<Flex

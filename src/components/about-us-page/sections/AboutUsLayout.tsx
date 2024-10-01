@@ -1,4 +1,5 @@
 import Title from '@/components/util/title/Title';
+import { fonts } from '@/lib/config/constants';
 import {
 	Box,
 	Flex,
@@ -36,6 +37,7 @@ const AboutUsLayout: FC<AboutUsLayoutProps> = ({ data, oddOrder }) => {
 				>
 					<Title textAlign={'left'} text={data?.title} />
 					<Text
+						fontFamily={fonts.text}
 						textAlign='left'
 						fontSize={{ base: '1rem', md: '1.15rem' }}
 						lineHeight='1.6'
@@ -47,6 +49,7 @@ const AboutUsLayout: FC<AboutUsLayoutProps> = ({ data, oddOrder }) => {
 						{data?.paraOne}
 					</Text>
 					<Text
+						fontFamily={fonts.text}
 						textAlign='left'
 						fontSize={{ base: '1rem', md: '1.15rem' }}
 						lineHeight='1.6'

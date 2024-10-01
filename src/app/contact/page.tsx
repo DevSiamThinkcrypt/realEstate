@@ -32,14 +32,14 @@ const page = () => {
 						<Box mt='5rem'>
 							<Heading
 								textAlign='center'
-								fontFamily={fonts.formText}
+								fontFamily={fonts.heading}
 								fontSize='44px'
 							>
 								Let’s bring your vision to life
 							</Heading>
 							<Text
 								textAlign='center'
-								fontFamily={fonts.formSubText}
+								fontFamily={fonts.text}
 								fontSize='1.1rem'
 								mt='5px'
 							>
@@ -64,15 +64,20 @@ const page = () => {
 						</Box>
 						<Flex gap='1rem' mt='1.8rem' alignItems='flex-start'>
 							<Checkbox size='lg' />
-							<Text mt='-0.4rem' color='primary.lightWhite'>
+							<Text
+								fontFamily={fonts.text}
+								mt='-0.4rem'
+								color='primary.lightWhite'
+							>
 								I give consent to the processing of my personal data given in
 								the contact form above as well as receiving commercial and
-								marketing communications under the terms and conditions of
-								Krishi Shwapno Privacy Policy.*
+								marketing communications under the terms and conditions of our
+								Privacy Policy.*
 							</Text>
 						</Flex>
 						<Center mt='4rem'>
 							<Button
+								fontFamily={fonts.text}
 								w='140px'
 								color='white'
 								borderRadius='full'

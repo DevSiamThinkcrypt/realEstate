@@ -1,3 +1,4 @@
+import { fonts } from '@/lib/config/constants';
 import { FormControl, FormLabel, Input, Box } from '@chakra-ui/react';
 import { FC, useState } from 'react';
 
@@ -19,6 +20,7 @@ const AnimatedInput: FC<inputTextType> = ({ inputText }) => {
 		<FormControl position='relative' mt={6}>
 			<FormLabel
 				position='absolute'
+				fontFamily={fonts.text}
 				top={isFocused || hasValue ? '-0.5rem' : '50%'}
 				left={isFocused || hasValue ? '0.25rem' : '0.15rem'}
 				fontSize={isFocused || hasValue ? '0.85rem' : '1rem'}
@@ -30,6 +32,7 @@ const AnimatedInput: FC<inputTextType> = ({ inputText }) => {
 				{inputText}
 			</FormLabel>
 			<Input
+			fontFamily={fonts.text}
 				variant='flushed'
 				onFocus={handleFocus}
 				onBlur={handleBlur}

@@ -25,7 +25,7 @@ const page = () => {
 			{/* Hero Section */}
 			<Banner
 				text='Commercial Property Services'
-				imgSrc='./image/service_banner.jpg'
+				imgSrc='./image/service_banner1.jpg'
 			/>
 
 			<TwoColumnText data={serviceAppartment} />
@@ -47,6 +47,7 @@ const page = () => {
 					textAlign='center'
 					maxW='66rem'
 					fontSize='1.2rem'
+					fontFamily={fonts.text}
 					fontWeight='500'
 				>
 					Our commercial property experts combine commercial acumen and

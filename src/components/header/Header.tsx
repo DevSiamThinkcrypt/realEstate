@@ -59,7 +59,7 @@ const Header: FC<HeaderProps> = ({ variant }) => {
 			p={{ base: '0px 20px', xl: '0px 120px' }}
 			transition='all 0.3s ease-in-out'
 			style={blurBg}
-			bg={isSticky ? 'rgba(245, 245, 245, 0.623)' : ''}
+			bg={isSticky ? 'rgba(150, 148, 148, 0.223)' : ''}
 		>
 			<Flex justifyContent={'space-between'} alignItems='center' height='100%'>
 				<Flex

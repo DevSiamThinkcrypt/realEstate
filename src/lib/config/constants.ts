@@ -10,10 +10,11 @@ export const URL = {
 };
 
 export const fonts = {
-	heading: 'Barlow Condensed',
-	text: 'Roboto',
+	heading: 'Helvetica',
+	// text: 'Roboto',
 	formText: 'Barlow Condensed',
-	formSubText: 'Segoe UI',
+	text: 'Space Grotesk',
+	// text: 'Helvetica',
 	primary: 'DM Sans',
 	logo: 'Montserrat, sans-serif',
 };

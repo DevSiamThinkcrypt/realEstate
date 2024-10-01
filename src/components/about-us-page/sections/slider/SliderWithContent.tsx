@@ -1,5 +1,6 @@
 'use client';
 import { Overlay, VisionHeadingText } from '@/components/util';
+import { fonts } from '@/lib/config/constants';
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import {
 	Box,
@@ -108,7 +109,7 @@ const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
 		centerMode: true,
 		centerPadding: '300px',
 		// autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 3000,
 		pauseOnHover: true,
 		slidesToShow: 1,
 		infinite: true,
@@ -186,6 +187,7 @@ const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
 										{item?.content?.heading}
 									</VisionHeadingText>
 									<Text
+										fontFamily={fonts.text}
 										fontSize={{ base: '1rem', lg: '1.5rem' }}
 										color='primary.white'
 										maxW={{ base: '60rem' }}
@@ -193,8 +195,15 @@ const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
 										{item?.content?.para}
 									</Text>
 									<Link href='#'>
-										<Flex alignItems='center' color='white' gap='0.4rem' mt='10px'>
-											<Text data-peer>{item?.buttonText}</Text>
+										<Flex
+											alignItems='center'
+											color='white'
+											gap='0.4rem'
+											mt='10px'
+										>
+											<Text data-peer fontFamily={fonts.text}>
+												{item?.buttonText}
+											</Text>
 											<Icon
 												_peerHover={{
 													transform: 'translateX(5px)',

@@ -35,7 +35,7 @@ const About = () => {
 		<PageLayout variant='solid'>
 			{/* Banner Section */}
 			{/* <Banner bannarData={aboutPageData?.banner} /> */}
-			<Banner text='About Us' imgSrc='./image/about_us_bannar.png' />
+			<Banner text='About Us' imgSrc='./image/about_us_banner_a1.jpg' />
 			<Box mb={{ base: '2rem', sm: '6rem' }}>
 				{aboutUsData.map((property, index) => (
 					<AboutUsLayout data={property} oddOrder={index % 2 === 1} />

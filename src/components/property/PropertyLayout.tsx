@@ -1,4 +1,5 @@
 import Title from '@/components/util/title/Title';
+import { fonts } from '@/lib/config/constants';
 import {
 	Box,
 	Flex,
@@ -39,16 +40,18 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 				>
 					<Title textAlign={'left'} text={data?.title} />
 					<Text
+						fontFamily={fonts.text}
 						textAlign='left'
 						fontSize={{ base: '1rem', md: '1.15rem' }}
 						lineHeight='1.6'
 						mb='12px'
 						mt='10px'
-						fontWeight='500'
+						fontWeight='700'
 					>
-						{data?.price}
+						<strong> {data?.price}</strong>
 					</Text>
 					<Text
+						fontFamily={fonts.text}
 						textAlign='left'
 						fontSize={{ base: '1rem', md: '1.15rem' }}
 						lineHeight='1.6'
@@ -62,6 +65,7 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 					order={{ base: '2', md: oddOrder ? '1' : '2' }}
 					w='full'
 					minH={{ base: 'auto', md: '600px' }}
+					pos={'relative'}
 				>
 					<Image
 						w='full'
@@ -70,6 +74,49 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 						alt='Story Image'
 						objectFit='cover'
 					/>
+					<Box
+						bg='white'
+						w='max-content'
+						px='1.4rem'
+						py='0.6rem'
+						rounded='md'
+						shadow='lg'
+						pos={'absolute'}
+						top={5}
+						left={5}
+						display='flex'
+						justifyContent='center'
+						alignItems='center'
+					>
+						<Text fontFamily={fonts.text} fontWeight='600'>
+							{' '}
+							For Sale
+						</Text>
+					</Box>
+					<Box
+						w='max-content'
+						px='1.4rem'
+						py='0.6rem'
+						rounded='md'
+						shadow='lg'
+						pos={'absolute'}
+						bottom='0'
+						left={1}
+						display='flex'
+						justifyContent='center'
+						alignItems='center'
+					>
+						<Text
+							fontSize='4rem'
+							color='white'
+							fontFamily={fonts.text}
+							fontWeight='600'
+							opacity='0.4'
+							textTransform='uppercase'
+						>
+							OnGoing
+						</Text>
+					</Box>
 				</Flex>
 			</SimpleGrid>
 		</Box>
@@ -77,3 +124,9 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 };
 
 export default PropertyLayout;
+// position: absolute;
+//     bottom: 7rem;
+//     left: 2rem;
+//     color: var(--chakra-colors-primary-white);
+//     font-size: 12rem;
+//     opacity: 0.4;

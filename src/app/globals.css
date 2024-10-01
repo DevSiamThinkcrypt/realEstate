@@ -1,5 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
@@ -58,11 +60,18 @@
 	font-weight: 700;
 }
 
+@font-face {
+	font-family: 'Helvetica';
+	src: url('/fonts/helvetica/Helvetica-Bold.ttf');
+	font-weight: 700;
+}
+
 :root {
 	--font-mono: ui-monospace, Menlo, Monaco, sans-serif, 'Cascadia Mono',
 		'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace',
 		'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Montserrat',
-		'Courier New', monospace, 'DM Sans', 'Barlow Condensed', 'Roboto';
+		'Courier New', monospace, 'DM Sans', 'Barlow Condensed', 'Roboto',
+		'Space Grotesk';
 }
 
 * {

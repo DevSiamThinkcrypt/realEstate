@@ -103,7 +103,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 					color={color}
 					lineHeight='2.4rem'
 					fontFamily={fonts.heading}
-					fontWeight='600'
+					fontWeight='700'
 					fontSize='2.25rem'
 					mb={4}
 					variants={staggerItem}
@@ -116,7 +116,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 				<Text
 					as={motion.text}
 					fontFamily={fonts.text}
-					fontWeight='300'
+					fontWeight='400'
 					color={color}
 					fontSize='1rem'
 					mb={4}
@@ -139,7 +139,13 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 						// className='hoverEffect'
 						variants={staggerItem}
 					>
-						<Text data-peer as={motion.text} pos='relative' zIndex={5}>
+						<Text
+							data-peer
+							as={motion.text}
+							pos='relative'
+							zIndex={5}
+							fontFamily={fonts.text}
+						>
 							{btnText}
 						</Text>
 						<Icon
@@ -149,7 +155,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 							}}
 							as={MdOutlineArrowForward}
 							color={color}
-							boxSize={25}
+							boxSize={23}
 						/>
 					</motion.div>
 				</Link>

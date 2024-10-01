@@ -1,3 +1,4 @@
+import { fonts } from '@/lib/config/constants';
 import { Box, Stack, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 
@@ -14,7 +15,6 @@ const Navlink: React.FC<NavlinkProps> = ({
 	label,
 	clickable = true,
 }) => {
-
 	return clickable ? (
 		// Render as a clickable Link if `clickable` is true
 		<Link
@@ -27,22 +27,24 @@ const Navlink: React.FC<NavlinkProps> = ({
 			}}
 			href={link}
 		>
-			<Stack
-				transition='.3s'
-				alignItems='flex-end'
-				gap='3px'
-			>
+			<Stack transition='.3s' alignItems='flex-end' gap='3px'>
 				{label && (
 					<Text
 						fontSize='0.6em'
 						opacity='0.75'
 						fontWeight='bold'
 						lineHeight='0.6em'
+						fontFamily={fonts.text}
 					>
 						{label}
 					</Text>
 				)}
-				<Text fontSize='1.025rem' lineHeight={1.3} fontWeight='500'>
+				<Text
+					fontSize='1.025rem'
+					fontFamily={fonts.text}
+					lineHeight={1.3}
+					fontWeight='500'
+				>
 					{text}
 				</Text>
 			</Stack>
@@ -58,11 +60,7 @@ const Navlink: React.FC<NavlinkProps> = ({
 				alignItems: 'center',
 			}}
 		>
-			<Stack
-				transition='.3s'
-				alignItems='flex-end'
-				gap='3px'
-			>
+			<Stack transition='.3s' alignItems='flex-end' gap='3px'>
 				{label && (
 					<Text
 						fontSize='0.6em'

@@ -36,7 +36,7 @@ const ButtonComp = () => {
 				fontWeight='500'
 				text='Reach Out'
 				fontSize='1.025rem'
-				bgColor='button.500'
+				bgColor='#3B005D'
 				animation='scaleButton 2s infinite ease-in-out'
 			/>
 		</Box>

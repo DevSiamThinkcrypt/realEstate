@@ -12,6 +12,7 @@ import { serviceExpertData } from '@/lib/data/serviceData';
 import { Box, Flex, Grid, Heading, Select } from '@chakra-ui/react';
 import PropertyLayout from '@/components/property/PropertyLayout';
 import { propertyData } from '@/lib/data/propertyData';
+import { fonts } from '@/lib/config/constants';
 
 const ValuePage = () => {
 	const [selectedSize, setSelectedSize] = useState('');
@@ -37,7 +38,7 @@ const ValuePage = () => {
 			{/* <Banner bannarData={valueData?.banner} /> */}
 			<Banner
 				text='Commercial Property Services'
-				imgSrc='./image/property_bannar.jpg'
+				imgSrc='./image/property_banner_a1.jpg'
 			/>
 			<Box
 				borderBottom='1px solid'
@@ -47,16 +48,16 @@ const ValuePage = () => {
 				mb='2rem'
 			>
 				<Grid gridTemplateColumns='6fr 1fr' alignItems='center'>
-					<Heading>For Sale</Heading>
+					<Heading fontFamily={fonts.heading}>For Sale</Heading>
 					<Select
+						fontFamily={fonts.text}
 						placeholder='Filter'
 						size='md'
 						value={selectedSize}
 						onChange={handleSelectChange}
 					>
-						<option value='newest'>Newest Listings</option>
-						<option value='increase'>Price Increasing</option>
-						<option value='decrease'>Price Decreasing</option>
+						<option value='location'>Location</option>
+						<option value='price'>Price</option>
 					</Select>
 				</Grid>
 			</Box>
