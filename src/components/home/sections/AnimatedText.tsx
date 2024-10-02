@@ -59,7 +59,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 			justifyContent='center'
 			alignItems={{ base: 'start', md: 'center' }}
 			flexDir='column'
-			h={{ base: '50vh', md: '100vh' }}
+			h={{ base: '60vh', md: '100vh' }}
 		>
 			<Box
 				display='flex'

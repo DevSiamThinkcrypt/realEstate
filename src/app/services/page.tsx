@@ -1,21 +1,13 @@
 'use client';
 import {
 	Banner,
-	ReusableBanner,
-	Slider,
 	SliderWithContent,
 	TwoColumnText,
 } from '@/components';
 import { fonts } from '@/lib/config/constants';
 import PageLayout from '@/components/layout/PageLayout';
-import SectionTitle from '@/components/util/sectionTitle/SectionTitle';
 import { serviceAppartment } from '@/lib/data/sectionData';
-import { serviceExpertData, solutionSliderData } from '@/lib/data/serviceData';
-import {
-	solutionDataOne,
-	solutionDataTwo,
-	solutionPageBannerData,
-} from '@/lib/data/solutionPageData';
+import { solutionSliderData } from '@/lib/data/serviceData';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 

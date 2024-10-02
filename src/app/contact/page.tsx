@@ -84,7 +84,7 @@ const page = () => {
 							<Heading
 								textAlign='center'
 								fontFamily={fonts.heading}
-								fontSize='44px'
+								fontSize={{ base: '2.5rem', md: '3.5rem' }}
 							>
 								Let’s bring your vision to life
 							</Heading>

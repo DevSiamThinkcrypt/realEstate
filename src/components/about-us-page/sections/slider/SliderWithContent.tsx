@@ -104,7 +104,7 @@ type SliderWithContent = {
 };
 
 const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
-	console.log('my sliderData:', sliderData);
+	
 	const settings = {
 		centerMode: true,
 		centerPadding: '300px',
@@ -216,18 +216,7 @@ const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
 								</Box>
 							)}
 
-							{/* {item?.label && (
-								<Box
-									position='absolute'
-									bottom='7rem'
-									left='2rem'
-									color='primary.white'
-									fontSize='12rem'
-									opacity='.4'
-								>
-									{item?.label}
-								</Box>
-							)} */}
+							
 						</Box>
 					</Box>
 				))}

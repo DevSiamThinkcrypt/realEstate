@@ -36,10 +36,10 @@ const SectionContent: React.FC<SectionContentProps> = ({
 				'&::after': {
 					content: `''`,
 					position: 'absolute',
-					left: '20%',
+					left: { base: '12%', md: '20%' },
 					right: '0',
 					top: '0',
-					height: '21%',
+					height: { base: '15%', md: '21%' },
 					backgroundImage:
 						'radial-gradient(circle at 1px 1px, #2e2c32 1px, transparent 0)',
 					backgroundSize: '20px 20px',

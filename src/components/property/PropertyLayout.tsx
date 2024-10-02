@@ -46,18 +46,22 @@ type PropertyLayoutProps = {
 
 const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 	return (
-		<Box p={{ base: '20px 20px', xl: '20px 120px' }}>
-			<SimpleGrid columns={{ base: 1, md: 2 }}>
+		<Box p={{ base: '20px 20px 40px', lg: '20px 20px', xl: '20px 120px' }}>
+			<SimpleGrid columns={{ base: 1, lg: 2 }}>
 				<Stack
-					order={{ base: '1', md: oddOrder ? '2' : '1' }}
+					order={{ base: '2', lg: oddOrder ? '2' : '1' }}
 					w='full'
 					h='full'
 					alignItems='left'
 					justifyContent='center'
-					paddingLeft={oddOrder ? '2rem' : ''}
+					paddingLeft={oddOrder ? { base: 0, lg: '2rem' } : ''}
 					paddingRight={oddOrder ? '2rem' : ''}
 				>
-					<Title textAlign={'left'} text={data?.title} />
+					<Title
+						mt={{ base: '1rem', lg: 0 }}
+						textAlign={'left'}
+						text={data?.title}
+					/>
 					<Text
 						fontFamily={fonts.text}
 						textAlign='left'
@@ -80,10 +84,14 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 						{data?.description}
 					</Text>
 					<Grid
-						gridTemplateColumns='repeat(5, 0.5fr)'
-						justifyItems='center'
-						maxW='35rem'
-						mt='2rem'
+						gridTemplateColumns={{
+							base: 'repeat(3, 1fr)',
+							sm: 'repeat(5, 0.5fr)',
+						}}
+						justifyItems={{ base: 'start', sm: 'center' }}
+						maxW={{ base: '100%', sm: '35rem' }}
+						gridRowGap={{ base: '1rem', sm: 0 }}
+						mt={{ base: '1rem', lg: '2rem' }}
 					>
 						{data?.amenities?.map((amenitiy, i) => (
 							<GridItem
@@ -91,7 +99,7 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 								display='flex'
 								alignItems='center'
 								gap='0.5rem'
-								_first={{ justifySelf: 'self-start' }}
+								_first={{ justifySelf: 'self-start', fontSize: '0.88rem' }}
 								justifyItems='center'
 							>
 								<Icon as={amenitiy.icon} color='#444' boxSize='26px' />
@@ -104,7 +112,7 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 					</Grid>
 				</Stack>
 				<Flex
-					order={{ base: '2', md: oddOrder ? '1' : '2' }}
+					order={{ base: '1', lg: oddOrder ? '1' : '2' }}
 					w='full'
 					minH={{ base: 'auto', md: '600px' }}
 					pos={'relative'}
@@ -119,13 +127,14 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 					<Box
 						bg='white'
 						w='max-content'
-						px='1.4rem'
-						py='0.6rem'
+						px={{ base: '0.5rem', md: '1.4rem' }}
+						py={{ base: '0.2rem', md: '0.6rem' }}
+						fontSize={{ base: '0.8rem', md: '1rem' }}
 						rounded='md'
 						shadow='lg'
 						pos={'absolute'}
-						top={5}
-						left={5}
+						top={{ base: '0.5rem', md: '1rem' }}
+						left={{ base: '0.6rem', md: '1rem' }}
 						display='flex'
 						justifyContent='center'
 						alignItems='center'
@@ -142,18 +151,19 @@ const PropertyLayout: FC<PropertyLayoutProps> = ({ data, oddOrder }) => {
 						shadow='lg'
 						pos={'absolute'}
 						bottom='0'
-						left={1}
+						left={-4}
 						display='flex'
 						justifyContent='center'
 						alignItems='center'
 					>
 						<Text
-							fontSize='2.5rem'
+							fontSize={{ base: '1.8rem', md: '2.5rem' }}
 							color='white'
 							fontFamily={fonts.text}
 							fontWeight='600'
 							opacity='0.4'
 							textTransform='uppercase'
+							textShadow='0 3px 10px rgba(0,0,0,1)'
 						>
 							{data.status}
 						</Text>
