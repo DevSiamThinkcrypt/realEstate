@@ -10,7 +10,7 @@ export const URL = {
 };
 
 export const fonts = {
-	heading: 'Helvetica',
+	heading: 'NibPro',
 	// text: 'Roboto',
 	formText: 'Barlow Condensed',
 	text: 'Space Grotesk',

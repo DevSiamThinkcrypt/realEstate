@@ -71,7 +71,8 @@ const Header: FC<HeaderProps> = ({ variant }) => {
 					<Link href='/'>
 						<Image
 							w='auto'
-							h='95px'
+							h={{ base: '60px' }}
+							ml={{ base: '-0.7rem' }}
 							src='./image/logo_1.png'
 							alt='Logo Image'
 						/>

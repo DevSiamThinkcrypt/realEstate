@@ -30,13 +30,18 @@ const Banner: FC<BannerProps> = ({ bannarData, text, imgSrc }) => {
 				justifyContent='flex-end'
 				w='full'
 				h='full'
-				p={{ base: '80px 20px', xl: '80px 120px' }}
+				p={{
+					base: '80px 20px 30px',
+					sm: '80px 20px 30px',
+					lg: '80px 20px',
+					xl: '80px 120px',
+				}}
 			>
 				<Overlay bg='overlay.400' />
 				<Text
 					fontWeight='bold'
 					color='primary.white'
-					fontSize={{ base: '2.75rem', lg: '4.5rem' }}
+					fontSize={{ base: '2rem', sm: '3rem', lg: '4.5rem' }}
 					lineHeight={1}
 					letterSpacing='0.7px'
 					fontFamily={fonts.heading}

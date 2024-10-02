@@ -1,21 +1,13 @@
 'use client';
 import {
 	Banner,
-	ReusableBanner,
-	Slider,
 	SliderWithContent,
 	TwoColumnText,
 } from '@/components';
 import { fonts } from '@/lib/config/constants';
 import PageLayout from '@/components/layout/PageLayout';
-import SectionTitle from '@/components/util/sectionTitle/SectionTitle';
 import { serviceAppartment } from '@/lib/data/sectionData';
-import { serviceExpertData, solutionSliderData } from '@/lib/data/serviceData';
-import {
-	solutionDataOne,
-	solutionDataTwo,
-	solutionPageBannerData,
-} from '@/lib/data/solutionPageData';
+import { solutionSliderData } from '@/lib/data/serviceData';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 
@@ -30,8 +22,14 @@ const page = () => {
 
 			<TwoColumnText data={serviceAppartment} />
 
-			{/* Easy Step Section */}
-			<Flex mt='4rem' mb='2rem' alignItems='center' flexDir='column' gap={4}>
+			{/* Service Section */}
+			<Flex
+				mt={{ base: '2.8rem', sm: '4.5rem' }}
+				mb='2rem'
+				alignItems='center'
+				flexDir='column'
+				gap={4}
+			>
 				<Text
 					fontWeight='bold'
 					color='black'
@@ -46,7 +44,8 @@ const page = () => {
 				<Text
 					textAlign='center'
 					maxW='66rem'
-					fontSize='1.2rem'
+					padding={{ base: '1rem', sm: 0 }}
+					fontSize={{ base: '1rem', sm: '1.2rem' }}
 					fontFamily={fonts.text}
 					fontWeight='500'
 				>

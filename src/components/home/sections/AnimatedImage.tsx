@@ -21,7 +21,7 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({ imgSrc, vidSrc }) => {
 			flex='1'
 			position='relative'
 			overflow='hidden'
-			height='100vh'
+			height={{ base: '75vh', md: '100vh' }}
 		>
 			<motion.div
 				initial='initial'

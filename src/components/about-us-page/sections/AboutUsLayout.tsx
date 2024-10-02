@@ -32,17 +32,18 @@ const AboutUsLayout: FC<AboutUsLayoutProps> = ({ data, oddOrder }) => {
 					h='full'
 					alignItems='left'
 					justifyContent='center'
-					paddingLeft={oddOrder ? '2rem' : ''}
-					paddingRight={oddOrder ? '2rem' : ''}
+					paddingLeft={oddOrder ? { base: '0', md: '2rem' } : ''}
+					paddingRight={oddOrder ? { base: '0', md: '2rem' } : ''}
 				>
 					<Title textAlign={'left'} text={data?.title} />
 					<Text
 						fontFamily={fonts.text}
 						textAlign='left'
-						fontSize={{ base: '1rem', md: '1.15rem' }}
+						fontSize={{ base: '1rem', md: '1rem', lg: '1.15rem' }}
 						lineHeight='1.6'
+						pr='0.4rem'
 						mb='12px'
-						mt='10px'
+						mt={{ base: '0', md: '10px' }}
 						fontWeight='500'
 						maxW='48rem'
 					>
@@ -51,8 +52,9 @@ const AboutUsLayout: FC<AboutUsLayoutProps> = ({ data, oddOrder }) => {
 					<Text
 						fontFamily={fonts.text}
 						textAlign='left'
-						fontSize={{ base: '1rem', md: '1.15rem' }}
+						fontSize={{ base: '1rem', md: '1rem', lg: '1.15rem' }}
 						lineHeight='1.6'
+						pr='0.4rem'
 						fontWeight='500'
 						maxW='48rem'
 					>
@@ -63,6 +65,7 @@ const AboutUsLayout: FC<AboutUsLayoutProps> = ({ data, oddOrder }) => {
 					order={{ base: '2', md: oddOrder ? '1' : '2' }}
 					w='full'
 					minH={{ base: 'auto', md: '600px' }}
+					mt={{ base: '1.2rem', md: 0 }}
 				>
 					<Image
 						w='full'

@@ -10,7 +10,7 @@ export const aboutUsData = [
 		paraOne:
 			'Welcome to Royel LTD, Bangladesh’s premier destination for luxury real estate. With a deep understanding of the evolving property market, we are dedicated to helping you find the perfect home or investment property that meets your unique needs..',
 		paraTwo:
-			'Founded with a passion for excellence, [Your Company Name] has been a trusted name in the real estate industry for [number] years. Our team of experienced professionals brings together a wealth of local expertise, market insights, and a commitment to delivering exceptional service.',
+			'Founded with a passion for excellence, Royel LTD has been a trusted name in the real estate industry for 20 years. Our team of experienced professionals brings together a wealth of local expertise, market insights, and a commitment to delivering exceptional service.',
 	},
 	{
 		image: './image/service_slider_a3.jpg',
