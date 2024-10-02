@@ -108,7 +108,7 @@ const SliderWithContent: FC<SliderWithContent> = ({ sliderData }) => {
 	const settings = {
 		centerMode: true,
 		centerPadding: '300px',
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		pauseOnHover: true,
 		slidesToShow: 1,
